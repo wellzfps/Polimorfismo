@@ -1,11 +1,20 @@
-package entities;
+package Entities;
 
 public class Conta {
 	private int numero;
 	private String titular;
 	private double saldo;
+	private String tipoDaConta;
+	
+	
 	
 
+	public String getTipoDaConta() {
+		return tipoDaConta;
+	}
+	public void setTipoDaConta(String tipoDaConta) {
+		this.tipoDaConta = tipoDaConta;
+	}
 	public int getNumero() {
 		return numero;
 	}

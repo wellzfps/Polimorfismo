@@ -1,4 +1,4 @@
-package entities;
+package Entities;
 
 public class ContaPF extends Conta {
 	
@@ -12,24 +12,25 @@ public class ContaPF extends Conta {
 	public double getTaxaSaque() {
 		return taxaSaque;
 	}
+	public double getSaque() {
+		return saque;
+	}
+	public void setSaque(double saque) {
+		this.saque = saque;
+	}
 
+	public void saque1(double valor) {
+		this.saque(valor);
+	}
 	public void emprestimo(double valor) {
 		if (valor > getLimiteEmprestimo()) {
 			System.out.println("Valor não autorizado para esse saque");
 		}else {
-			valor =- getLimiteEmprestimo() - getTaxaSaque();
+			double saldo = (getSaldo() + valor) - getTaxaSaque();
+			setSaldo(saldo);
 		}
 		
 	}
-	
-	public double getSaque() {
-		return saque;
-	}
-	
-	public void setSaque(double saque) {
-		this.saque = saque;
-	}
-	public void saque1(double valor) {
-	 this.saque(valor);
-	}
 }
+	
+	

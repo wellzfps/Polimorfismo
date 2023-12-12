@@ -1,4 +1,4 @@
-package entities;
+package Entities;
 
 public class ContaPoupança extends Conta {
 
@@ -8,9 +8,9 @@ public class ContaPoupança extends Conta {
 		return taxaRendimento;
 	}
 
-	public void atualizarSaldo() {
-	
-		setSaldo(getSaldo()*getTaxaRendimento());
+	public void atualizarSaldo(double valor) {
+		double atualizarSaldo = valor + (valor * getTaxaRendimento());
+		setSaldo(atualizarSaldo);
 	}
 		
 }
