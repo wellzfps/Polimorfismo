@@ -25,8 +25,11 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
+	// Métodos
+	
 	public void saque (double sacar) {
-		this.saldo -= sacar;
+		double tempSaldo = sacar;
+		setSaldo(getSaldo() - tempSaldo);
 	}
 	
 	public void deposito (double depositar) {
